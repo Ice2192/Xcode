@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         nextQuestion()
-                
+        
     }
 
 
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
         
     }
     
-    // Restarts the app again
+    // Restarts the quiz again
     func startOver() {
         
         questionNumber = 0
