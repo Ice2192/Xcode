@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             
         }
         else {
-            let alert = UIAlertController(title: "Awesome", message: "You've finsihed all of the questions, do you want to start over?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Awesome", message: "You correctly answered \(score) of the 13 questions, do you want to start over?", preferredStyle: .alert)
             
             let restartAction = UIAlertAction(title: "Restart", style: .default) { (UIAlertAction) in
                 self.startOver()

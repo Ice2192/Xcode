@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
     
+
     // Function to change the dice images
     func updateDiceImages(){
         

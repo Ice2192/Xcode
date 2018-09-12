@@ -43,7 +43,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwl-nK-jYz"/>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYG-cD-XHA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,8 +51,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="diceImageView1" destination="1bW-n1-5TP" id="fGD-x6-hkV"/>
-                        <outlet property="diceImageView2" destination="3Sh-9H-kja" id="MK1-JC-WwB"/>
+                        <outlet property="diceImageView1" destination="1bW-n1-5TP" id="24z-7Q-FRZ"/>
+                        <outlet property="diceImageView2" destination="3Sh-9H-kja" id="ntV-Lx-pM2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
