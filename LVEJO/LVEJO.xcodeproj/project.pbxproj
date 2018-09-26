@@ -10,8 +10,9 @@
 		AE50C6622156022C00C7352E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50C6612156022C00C7352E /* AppDelegate.swift */; };
 		AE50C6642156022C00C7352E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50C6632156022C00C7352E /* ViewController.swift */; };
 		AE50C6672156022C00C7352E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE50C6652156022C00C7352E /* Main.storyboard */; };
-		AE50C6692156022C00C7352E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE50C6682156022C00C7352E /* Assets.xcassets */; };
+		AE50C6692156022C00C7352E /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE50C6682156022C00C7352E /* Image.xcassets */; };
 		AE50C66C2156022C00C7352E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE50C66A2156022C00C7352E /* LaunchScreen.storyboard */; };
+		AE61BF1D215C331C000D030C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61BF1C215C331C000D030C /* RecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +20,10 @@
 		AE50C6612156022C00C7352E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE50C6632156022C00C7352E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE50C6662156022C00C7352E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AE50C6682156022C00C7352E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE50C6682156022C00C7352E /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		AE50C66B2156022C00C7352E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE50C66D2156022C00C7352E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE61BF1C215C331C000D030C /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		AE50C6602156022C00C7352E /* LVEJO */ = {
 			isa = PBXGroup;
 			children = (
-				AE50C6612156022C00C7352E /* AppDelegate.swift */,
-				AE50C6632156022C00C7352E /* ViewController.swift */,
+				AECCC83A215C2FA400B70D63 /* Controller */,
 				AE50C6652156022C00C7352E /* Main.storyboard */,
-				AE50C6682156022C00C7352E /* Assets.xcassets */,
+				AE50C6682156022C00C7352E /* Image.xcassets */,
 				AE50C66A2156022C00C7352E /* LaunchScreen.storyboard */,
 				AE50C66D2156022C00C7352E /* Info.plist */,
 			);
 			path = LVEJO;
+			sourceTree = "<group>";
+		};
+		AECCC83A215C2FA400B70D63 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE50C6612156022C00C7352E /* AppDelegate.swift */,
+				AE50C6632156022C00C7352E /* ViewController.swift */,
+				AE61BF1C215C331C000D030C /* RecordViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE50C66C2156022C00C7352E /* LaunchScreen.storyboard in Resources */,
-				AE50C6692156022C00C7352E /* Assets.xcassets in Resources */,
+				AE50C6692156022C00C7352E /* Image.xcassets in Resources */,
 				AE50C6672156022C00C7352E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE61BF1D215C331C000D030C /* RecordViewController.swift in Sources */,
 				AE50C6642156022C00C7352E /* ViewController.swift in Sources */,
 				AE50C6622156022C00C7352E /* AppDelegate.swift in Sources */,
 			);

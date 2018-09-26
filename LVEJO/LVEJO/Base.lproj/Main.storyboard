@@ -294,7 +294,7 @@
         <!--Record-->
         <scene sceneID="Dit-fG-nE3">
             <objects>
-                <viewController title="Record" id="icn-db-8Gu" userLabel="Record" sceneMemberID="viewController">
+                <viewController title="Record" id="icn-db-8Gu" userLabel="Record" customClass="RecordViewController" customModule="LVEJO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wii-iF-OXx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -326,6 +326,9 @@
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nX2-f5-Ub9">
                                         <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="truckStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="UAK-By-niS"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <constraints>
@@ -349,6 +352,9 @@
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="brg-fz-HZ2">
                                         <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="peopleStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="tQV-nf-BcB"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <constraints>
@@ -372,6 +378,9 @@
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VvY-Or-gCK">
                                         <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="bicyclistsStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="Rmb-Za-GLF"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <constraints>
@@ -395,6 +404,9 @@
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ekh-7i-SRD">
                                         <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="smellStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="y5M-M7-0tA"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <constraints>
@@ -402,7 +414,7 @@
                                 </constraints>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yne-Bc-CR8">
-                                <rect key="frame" x="0.0" y="521" width="453" height="162"/>
+                                <rect key="frame" x="0.0" y="521" width="414" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="b82-9H-4c7"/>
                                 </constraints>
@@ -449,10 +461,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2HU-Lo-wZm"/>
                     </view>
+                    <connections>
+                        <outlet property="bicyclistsCount" destination="1Ri-Mi-Brc" id="b6m-P5-LEI"/>
+                        <outlet property="peopleCount" destination="7lc-Za-wL6" id="Hma-LR-dMH"/>
+                        <outlet property="smallCount" destination="cb9-CA-GDO" id="5O7-ko-7zf"/>
+                        <outlet property="truckCount" destination="kJU-Kr-gng" id="jCO-m4-sBO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1e-XP-wYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2109.5999999999999" y="10.344827586206897"/>
+            <point key="canvasLocation" x="2107.2463768115945" y="9.7826086956521738"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m0a-WX-HkG">
@@ -472,11 +490,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Log In" width="853" height="533"/>
+        <image name="Log In" width="853.33331298828125" height="533.33331298828125"/>
         <image name="Register" width="640" height="400"/>
-        <image name="Welcome" width="853" height="632"/>
+        <image name="Welcome" width="853.33331298828125" height="632.66668701171875"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Efm-fs-ZcI"/>
+        <segue reference="NLI-n9-wQO"/>
     </inferredMetricsTieBreakers>
 </document>
