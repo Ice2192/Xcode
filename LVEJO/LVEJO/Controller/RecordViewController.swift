@@ -18,18 +18,32 @@ class RecordViewController: UIViewController {
     
     
     // Stepper
+    // Hitting the plus and minus buttons will change the
+    // count value of the item.
     @IBAction func truckStepper(_ sender: UIStepper) {
-        truckCount.text = String(sender.value)
+        var truckNum = 0
+        truckNum = Int(sender.value)
+        truckCount.text = String(truckNum)
     }
     @IBAction func peopleStepper(_ sender: UIStepper) {
-        peopleCount.text = String(sender.value)
+        var peopleNum = 0
+        peopleNum = Int(sender.value)
+        peopleCount.text = String(peopleNum)
     }
     @IBAction func bicyclistsStepper(_ sender: UIStepper) {
-        bicyclistsCount.text = String(sender.value)
+        var bicyclistsNum = 0
+        bicyclistsNum = Int(sender.value)
+        bicyclistsCount.text = String(bicyclistsNum)
     }
     @IBAction func smellStepper(_ sender: UIStepper) {
-        smallCount.text = String(sender.value)
+        var smellNum = 0
+        smellNum = Int(sender.value)
+        smallCount.text = String(smellNum)
     }
+    
+    
+    // Date & Time
+    
     
     
     
@@ -37,6 +51,7 @@ class RecordViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
 
