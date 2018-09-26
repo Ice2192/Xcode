@@ -57,12 +57,20 @@
 			isa = PBXGroup;
 			children = (
 				AECCC83A215C2FA400B70D63 /* Controller */,
-				AE50C6652156022C00C7352E /* Main.storyboard */,
+				AEC6710E215C41DB002018DB /* Storyboard */,
 				AE50C6682156022C00C7352E /* Image.xcassets */,
-				AE50C66A2156022C00C7352E /* LaunchScreen.storyboard */,
 				AE50C66D2156022C00C7352E /* Info.plist */,
 			);
 			path = LVEJO;
+			sourceTree = "<group>";
+		};
+		AEC6710E215C41DB002018DB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AE50C66A2156022C00C7352E /* LaunchScreen.storyboard */,
+				AE50C6652156022C00C7352E /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		AECCC83A215C2FA400B70D63 /* Controller */ = {
