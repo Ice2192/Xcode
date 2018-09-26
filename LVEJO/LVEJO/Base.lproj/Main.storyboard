@@ -490,9 +490,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Log In" width="853.33331298828125" height="533.33331298828125"/>
+        <image name="Log In" width="853" height="533"/>
         <image name="Register" width="640" height="400"/>
-        <image name="Welcome" width="853.33331298828125" height="632.66668701171875"/>
+        <image name="Welcome" width="853" height="632"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NLI-n9-wQO"/>
