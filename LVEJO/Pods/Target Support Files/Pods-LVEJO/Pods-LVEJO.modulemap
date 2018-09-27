@@ -1,0 +1,6 @@
+framework module Pods_LVEJO {
+  umbrella header "Pods-LVEJO-umbrella.h"
+
+  export *
+  module * { export * }
+}
