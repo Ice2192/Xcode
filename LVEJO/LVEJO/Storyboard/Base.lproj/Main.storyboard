@@ -46,17 +46,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome" translatesAutoresizingMaskIntoConstraints="NO" id="sFc-qR-GA8">
                                 <rect key="frame" x="0.0" y="64" width="414" height="582"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LVEJO Brand &amp; Logo" translatesAutoresizingMaskIntoConstraints="NO" id="F1h-tp-XCb">
+                                <rect key="frame" x="226" y="84" width="168" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="3uy-tf-SWs"/>
+                                    <constraint firstAttribute="width" constant="168" id="nuQ-IH-f0w"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vxp-da-KEy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Sh-Ti-RYS"/>
                             <constraint firstItem="vxp-da-KEy" firstAttribute="top" secondItem="ubd-9n-G4V" secondAttribute="bottom" id="6PX-DR-XGc"/>
                             <constraint firstItem="sFc-qR-GA8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AoS-A7-H2c"/>
+                            <constraint firstItem="F1h-tp-XCb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FaU-oN-E7A"/>
                             <constraint firstItem="vxp-da-KEy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HBe-sh-cT3"/>
                             <constraint firstItem="ubd-9n-G4V" firstAttribute="top" secondItem="sFc-qR-GA8" secondAttribute="bottom" id="PS1-hO-Jjv"/>
                             <constraint firstItem="sFc-qR-GA8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XyV-vs-1wu"/>
                             <constraint firstItem="vxp-da-KEy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d3o-cR-Gox"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubd-9n-G4V" secondAttribute="trailing" id="fRx-8f-Ei9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F1h-tp-XCb" secondAttribute="trailing" constant="20" id="pUT-Oo-ykz"/>
                             <constraint firstItem="ubd-9n-G4V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qeM-ph-6L1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sFc-qR-GA8" secondAttribute="trailing" id="tJE-4N-Anu"/>
                         </constraints>
@@ -66,12 +75,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541.60000000000002" y="10.344827586206897"/>
+            <point key="canvasLocation" x="540.57971014492762" y="9.7826086956521738"/>
         </scene>
         <!--Log In-->
         <scene sceneID="RbO-OK-Ion">
             <objects>
-                <viewController title="Log In" id="PeZ-t5-5nN" sceneMemberID="viewController">
+                <viewController title="Log In" id="PeZ-t5-5nN" customClass="LogInViewController" customModule="LVEJO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uml-ZY-vke">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +120,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmn-d8-ITs">
                                         <rect key="frame" x="16" y="164" width="382" height="30"/>
@@ -178,7 +187,7 @@
         <!--Register-->
         <scene sceneID="x9z-5f-rpp">
             <objects>
-                <viewController title="Register" id="q6U-Xg-UsG" sceneMemberID="viewController">
+                <viewController title="Register" id="q6U-Xg-UsG" customClass="RegisterViewController" customModule="LVEJO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bUl-gy-Ual">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,6 +205,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="registerPressed:" destination="q6U-Xg-UsG" eventType="touchUpInside" id="FHx-bV-WQQ"/>
                                     <segue destination="icn-db-8Gu" kind="show" id="Efm-fs-ZcI"/>
                                 </connections>
                             </button>
@@ -209,7 +219,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reenter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zxu-cb-uuq" userLabel="Password Text Field">
                                         <rect key="frame" x="16" y="164" width="382" height="30"/>
@@ -218,7 +228,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64n-5a-vWd" userLabel="E-Mail Text Field">
                                         <rect key="frame" x="16" y="88" width="382" height="30"/>
@@ -286,6 +296,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vVK-Dj-waW"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextfield" destination="64n-5a-vWd" id="x6b-pW-Sk6"/>
+                        <outlet property="passwordTextfield" destination="L4x-Lr-BRa" id="F5R-Qy-VJQ"/>
+                        <outlet property="phoneTextfield" destination="MGy-0g-T5o" id="cgG-aQ-3cN"/>
+                        <outlet property="repassTextfield" destination="Zxu-cb-uuq" id="Odm-wq-TSC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4g-5v-JFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -489,6 +505,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LVEJO Brand &amp; Logo" width="187" height="67"/>
         <image name="Log In" width="853.33331298828125" height="533.33331298828125"/>
         <image name="Register" width="640" height="400"/>
         <image name="Welcome" width="853.33331298828125" height="632.66668701171875"/>
