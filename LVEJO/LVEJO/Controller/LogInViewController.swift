@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LogInViewController: UIViewController, UITextFieldDelegate {
 
@@ -30,4 +31,23 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
 
+    // Log in the user
+    
+    @IBAction func logInPressed(_ sender: Any) {
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            
+            if error != nil {
+                print("error!")
+            }
+            else {
+                print("Log in sucessful!")
+                
+                // If log in is successful, segue directly to record screen
+                self.performSegue(withIdentifier: "goToRecord", sender: self)
+                
+            }
+            
+        }
+    }
+    
 }
