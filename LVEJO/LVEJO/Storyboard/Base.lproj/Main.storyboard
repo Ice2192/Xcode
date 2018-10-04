@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RamaGothicE_Regular.otf">
+            <string>RamaGothicE-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
@@ -23,11 +28,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="xPA-4M-Rf7"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="q6U-Xg-UsG" kind="show" id="6RN-XO-7Jv"/>
+                                    <segue destination="q6U-Xg-UsG" kind="show" identifier="goToRegister" id="6RN-XO-7Jv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxp-da-KEy">
@@ -36,11 +42,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Ag1-VI-71r"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PeZ-t5-5nN" kind="show" id="8K9-l4-aP8"/>
+                                    <segue destination="PeZ-t5-5nN" kind="show" identifier="goToLogin" id="8K9-l4-aP8"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome" translatesAutoresizingMaskIntoConstraints="NO" id="sFc-qR-GA8">
@@ -94,11 +101,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ibY-e2-jlb"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="icn-db-8Gu" kind="show" id="NLI-n9-wQO"/>
+                                    <action selector="logInPressed:" destination="PeZ-t5-5nN" eventType="touchUpInside" id="hzZ-yp-eEX"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62x-dP-h3S">
@@ -128,6 +136,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="P81-Ew-hvQ"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="17"/>
                                         <state key="normal" title="Forgot Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -138,7 +147,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="6xS-hB-PYZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -179,6 +188,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SSy-Zp-LZS"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="TYy-Mu-HVG" id="a5w-kB-equ"/>
+                        <outlet property="passwordTextField" destination="O77-lQ-Ghg" id="SBO-ix-see"/>
+                        <segue destination="icn-db-8Gu" kind="show" identifier="goToRecord" id="7tr-aA-dOf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOm-A5-hW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,12 +215,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="OQQ-su-cQ0"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="registerPressed:" destination="q6U-Xg-UsG" eventType="touchUpInside" id="FHx-bV-WQQ"/>
-                                    <segue destination="icn-db-8Gu" kind="show" id="Efm-fs-ZcI"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj3-OD-tew">
@@ -254,7 +268,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Yct-YX-Arj"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -301,6 +315,7 @@
                         <outlet property="passwordTextfield" destination="L4x-Lr-BRa" id="F5R-Qy-VJQ"/>
                         <outlet property="phoneTextfield" destination="MGy-0g-T5o" id="cgG-aQ-3cN"/>
                         <outlet property="repassTextfield" destination="Zxu-cb-uuq" id="Odm-wq-TSC"/>
+                        <segue destination="icn-db-8Gu" kind="show" identifier="goToRecord" id="Tj7-md-zoh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4g-5v-JFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -319,8 +334,9 @@
                                 <rect key="frame" x="0.0" y="691" width="414" height="45"/>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.61960784310000006" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="eoo-bc-xc4"/>
+                                    <constraint firstAttribute="height" constant="45" id="U5K-ak-4Nc"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -330,7 +346,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-1k-BlU">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -357,7 +373,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-L0-JFr">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -384,7 +400,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bicyclists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rP-xl-OOM">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -411,7 +427,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Vj-STc">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -434,26 +450,29 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj6-no-KwD">
-                                <rect key="frame" x="0.0" y="279" width="414" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="279" width="414" height="29"/>
+                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yne-Bc-CR8">
-                                <rect key="frame" x="0.0" y="299.33333333333331" width="414" height="215.99999999999994"/>
+                                <rect key="frame" x="0.0" y="308" width="414" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="559290028.64888">
                                     <!--2018-09-22 06:20:28 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="en_US"/>
+                                <connections>
+                                    <action selector="dateAndTimeRecord:" destination="icn-db-8Gu" eventType="valueChanged" id="xcl-De-Otn"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DLI-au-S0v" firstAttribute="top" secondItem="pYi-fP-2ku" secondAttribute="bottom" constant="8" id="0em-Rr-EMY"/>
                             <constraint firstItem="Yne-Bc-CR8" firstAttribute="top" secondItem="Sj6-no-KwD" secondAttribute="bottom" id="3iL-2d-zBD"/>
-                            <constraint firstItem="gLt-05-Yzm" firstAttribute="trailing" secondItem="2HU-Lo-wZm" secondAttribute="trailing" id="7J3-Mj-e5t"/>
+                            <constraint firstAttribute="bottom" secondItem="gLt-05-Yzm" secondAttribute="bottom" id="8Ih-o8-XOb"/>
                             <constraint firstItem="pYi-fP-2ku" firstAttribute="top" secondItem="tBT-9c-KYI" secondAttribute="bottom" constant="8" id="8YO-Dt-h6I"/>
-                            <constraint firstItem="gLt-05-Yzm" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" id="BtD-Jb-MPa"/>
+                            <constraint firstAttribute="trailing" secondItem="gLt-05-Yzm" secondAttribute="trailing" id="9FO-Jb-ds3"/>
                             <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="lLi-25-vYy" secondAttribute="trailing" constant="16" id="CAV-Oh-746"/>
                             <constraint firstItem="lLi-25-vYy" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="D2J-tI-tPj"/>
                             <constraint firstItem="Yne-Bc-CR8" firstAttribute="trailing" secondItem="2HU-Lo-wZm" secondAttribute="trailing" id="HFY-UR-9nL"/>
@@ -466,16 +485,25 @@
                             <constraint firstItem="Sj6-no-KwD" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" id="S53-lV-FAv"/>
                             <constraint firstItem="DLI-au-S0v" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="aOn-f0-pAa"/>
                             <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="DLI-au-S0v" secondAttribute="trailing" constant="16" id="b7b-id-1bP"/>
+                            <constraint firstItem="gLt-05-Yzm" firstAttribute="leading" secondItem="Wii-iF-OXx" secondAttribute="leading" id="b9l-ZH-heo"/>
                             <constraint firstItem="tBT-9c-KYI" firstAttribute="top" secondItem="lLi-25-vYy" secondAttribute="bottom" constant="8" id="m90-1h-pfU"/>
                             <constraint firstItem="lLi-25-vYy" firstAttribute="top" secondItem="2HU-Lo-wZm" secondAttribute="top" constant="50" id="nZg-b6-Lwy"/>
                             <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="pYi-fP-2ku" secondAttribute="trailing" constant="16" id="pKY-Cs-suD"/>
                             <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="tBT-9c-KYI" secondAttribute="trailing" constant="16" id="sAT-gz-5eW"/>
-                            <constraint firstItem="gLt-05-Yzm" firstAttribute="bottom" secondItem="2HU-Lo-wZm" secondAttribute="bottom" id="suu-eo-rzW"/>
                             <constraint firstItem="pYi-fP-2ku" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="x9r-kh-iUg"/>
                             <constraint firstItem="tBT-9c-KYI" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="zeu-j7-d6t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2HU-Lo-wZm"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Record" id="Zao-mA-Erb">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="4ke-31-tI6">
+                            <connections>
+                                <action selector="logOutPressed:" destination="icn-db-8Gu" id="TKD-Ck-M6d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bicyclistsCount" destination="1Ri-Mi-Brc" id="b6m-P5-LEI"/>
                         <outlet property="peopleCount" destination="7lc-Za-wL6" id="Hma-LR-dMH"/>
@@ -506,11 +534,11 @@
     </scenes>
     <resources>
         <image name="LVEJO Brand &amp; Logo" width="187" height="67"/>
-        <image name="Log In" width="853.33331298828125" height="533.33331298828125"/>
-        <image name="Register" width="640" height="400"/>
+        <image name="Log In" width="564" height="1003"/>
+        <image name="Register" width="500" height="750"/>
         <image name="Welcome" width="853.33331298828125" height="632.66668701171875"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Efm-fs-ZcI"/>
+        <segue reference="Tj7-md-zoh"/>
     </inferredMetricsTieBreakers>
 </document>

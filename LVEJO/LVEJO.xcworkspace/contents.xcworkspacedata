@@ -4,6 +4,10 @@
    <FileRef
       location = "group:LVEJO.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Fonts">
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

@@ -17,6 +17,24 @@
 		AE50C6692156022C00C7352E /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE50C6682156022C00C7352E /* Image.xcassets */; };
 		AE50C66C2156022C00C7352E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE50C66A2156022C00C7352E /* LaunchScreen.storyboard */; };
 		AE61BF1D215C331C000D030C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61BF1C215C331C000D030C /* RecordViewController.swift */; };
+		AEB8EFDD2162C69D0032B574 /* RamaGothicE_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFCB2162C69B0032B574 /* RamaGothicE_Regular.otf */; };
+		AEB8EFDE2162C69D0032B574 /* RamaGothicE_Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFCC2162C69B0032B574 /* RamaGothicE_Heavy.otf */; };
+		AEB8EFDF2162C69D0032B574 /* RamaGothicM_Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFCD2162C69C0032B574 /* RamaGothicM_Heavy.otf */; };
+		AEB8EFE02162C69D0032B574 /* RamaGothicC_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFCE2162C69C0032B574 /* RamaGothicC_Bold.otf */; };
+		AEB8EFE12162C69D0032B574 /* RamaGothicE_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFCF2162C69C0032B574 /* RamaGothicE_Light.otf */; };
+		AEB8EFE22162C69D0032B574 /* RamaGothicC_Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD02162C69C0032B574 /* RamaGothicC_Heavy.otf */; };
+		AEB8EFE32162C69D0032B574 /* RamaGothicM_Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD12162C69C0032B574 /* RamaGothicM_Thin.otf */; };
+		AEB8EFE42162C69D0032B574 /* RamaGothicE_Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD22162C69C0032B574 /* RamaGothicE_Thin.otf */; };
+		AEB8EFE52162C69D0032B574 /* RamaGothicM_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD32162C69C0032B574 /* RamaGothicM_Regular.otf */; };
+		AEB8EFE62162C69D0032B574 /* RamaGothicC_Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD42162C69C0032B574 /* RamaGothicC_Thin.otf */; };
+		AEB8EFE72162C69D0032B574 /* RamaGothicE_SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD52162C69C0032B574 /* RamaGothicE_SemiBold.otf */; };
+		AEB8EFE82162C69D0032B574 /* RamaGothicE_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD62162C69D0032B574 /* RamaGothicE_Bold.otf */; };
+		AEB8EFE92162C69D0032B574 /* RamaGothicM_SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD72162C69D0032B574 /* RamaGothicM_SemiBold.otf */; };
+		AEB8EFEA2162C69D0032B574 /* RamaGothicC_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD82162C69D0032B574 /* RamaGothicC_Regular.otf */; };
+		AEB8EFEB2162C69D0032B574 /* RamaGothicM_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFD92162C69D0032B574 /* RamaGothicM_Bold.otf */; };
+		AEB8EFEC2162C69D0032B574 /* RamaGothicM_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFDA2162C69D0032B574 /* RamaGothicM_Light.otf */; };
+		AEB8EFED2162C69D0032B574 /* RamaGothicC_SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFDB2162C69D0032B574 /* RamaGothicC_SemiBold.otf */; };
+		AEB8EFEE2162C69D0032B574 /* RamaGothicC_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEB8EFDC2162C69D0032B574 /* RamaGothicC_Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +51,24 @@
 		AE50C66B2156022C00C7352E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE50C66D2156022C00C7352E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE61BF1C215C331C000D030C /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		AEB8EFCB2162C69B0032B574 /* RamaGothicE_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicE_Regular.otf; sourceTree = "<group>"; };
+		AEB8EFCC2162C69B0032B574 /* RamaGothicE_Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicE_Heavy.otf; sourceTree = "<group>"; };
+		AEB8EFCD2162C69C0032B574 /* RamaGothicM_Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicM_Heavy.otf; sourceTree = "<group>"; };
+		AEB8EFCE2162C69C0032B574 /* RamaGothicC_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicC_Bold.otf; sourceTree = "<group>"; };
+		AEB8EFCF2162C69C0032B574 /* RamaGothicE_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicE_Light.otf; sourceTree = "<group>"; };
+		AEB8EFD02162C69C0032B574 /* RamaGothicC_Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicC_Heavy.otf; sourceTree = "<group>"; };
+		AEB8EFD12162C69C0032B574 /* RamaGothicM_Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicM_Thin.otf; sourceTree = "<group>"; };
+		AEB8EFD22162C69C0032B574 /* RamaGothicE_Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicE_Thin.otf; sourceTree = "<group>"; };
+		AEB8EFD32162C69C0032B574 /* RamaGothicM_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicM_Regular.otf; sourceTree = "<group>"; };
+		AEB8EFD42162C69C0032B574 /* RamaGothicC_Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicC_Thin.otf; sourceTree = "<group>"; };
+		AEB8EFD52162C69C0032B574 /* RamaGothicE_SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicE_SemiBold.otf; sourceTree = "<group>"; };
+		AEB8EFD62162C69D0032B574 /* RamaGothicE_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicE_Bold.otf; sourceTree = "<group>"; };
+		AEB8EFD72162C69D0032B574 /* RamaGothicM_SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicM_SemiBold.otf; sourceTree = "<group>"; };
+		AEB8EFD82162C69D0032B574 /* RamaGothicC_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicC_Regular.otf; sourceTree = "<group>"; };
+		AEB8EFD92162C69D0032B574 /* RamaGothicM_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicM_Bold.otf; sourceTree = "<group>"; };
+		AEB8EFDA2162C69D0032B574 /* RamaGothicM_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicM_Light.otf; sourceTree = "<group>"; };
+		AEB8EFDB2162C69D0032B574 /* RamaGothicC_SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicC_SemiBold.otf; sourceTree = "<group>"; };
+		AEB8EFDC2162C69D0032B574 /* RamaGothicC_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RamaGothicC_Light.otf; sourceTree = "<group>"; };
 		BE8AB7B6FD524EE28F8564DC /* Pods_LVEJO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LVEJO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +100,7 @@
 				AE50C65F2156022C00C7352E /* Products */,
 				7D2A62899416941DB0DF9B04 /* Pods */,
 				D82CF54F69A69A803B7A2385 /* Frameworks */,
+				AEB8EFCA2162C60F0032B574 /* Fonts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +122,31 @@
 				AE396C39215C519000FFC0EC /* GoogleService-Info.plist */,
 			);
 			path = LVEJO;
+			sourceTree = "<group>";
+		};
+		AEB8EFCA2162C60F0032B574 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AEB8EFCE2162C69C0032B574 /* RamaGothicC_Bold.otf */,
+				AEB8EFD02162C69C0032B574 /* RamaGothicC_Heavy.otf */,
+				AEB8EFDC2162C69D0032B574 /* RamaGothicC_Light.otf */,
+				AEB8EFD82162C69D0032B574 /* RamaGothicC_Regular.otf */,
+				AEB8EFDB2162C69D0032B574 /* RamaGothicC_SemiBold.otf */,
+				AEB8EFD42162C69C0032B574 /* RamaGothicC_Thin.otf */,
+				AEB8EFD62162C69D0032B574 /* RamaGothicE_Bold.otf */,
+				AEB8EFCC2162C69B0032B574 /* RamaGothicE_Heavy.otf */,
+				AEB8EFCF2162C69C0032B574 /* RamaGothicE_Light.otf */,
+				AEB8EFCB2162C69B0032B574 /* RamaGothicE_Regular.otf */,
+				AEB8EFD52162C69C0032B574 /* RamaGothicE_SemiBold.otf */,
+				AEB8EFD22162C69C0032B574 /* RamaGothicE_Thin.otf */,
+				AEB8EFD92162C69D0032B574 /* RamaGothicM_Bold.otf */,
+				AEB8EFCD2162C69C0032B574 /* RamaGothicM_Heavy.otf */,
+				AEB8EFDA2162C69D0032B574 /* RamaGothicM_Light.otf */,
+				AEB8EFD32162C69C0032B574 /* RamaGothicM_Regular.otf */,
+				AEB8EFD72162C69D0032B574 /* RamaGothicM_SemiBold.otf */,
+				AEB8EFD12162C69C0032B574 /* RamaGothicM_Thin.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		AEC6710E215C41DB002018DB /* Storyboard */ = {
@@ -176,10 +238,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB8EFDD2162C69D0032B574 /* RamaGothicE_Regular.otf in Resources */,
+				AEB8EFEB2162C69D0032B574 /* RamaGothicM_Bold.otf in Resources */,
 				AE50C66C2156022C00C7352E /* LaunchScreen.storyboard in Resources */,
+				AEB8EFE22162C69D0032B574 /* RamaGothicC_Heavy.otf in Resources */,
+				AEB8EFE72162C69D0032B574 /* RamaGothicE_SemiBold.otf in Resources */,
 				AE396C3A215C519000FFC0EC /* GoogleService-Info.plist in Resources */,
 				AE50C6692156022C00C7352E /* Image.xcassets in Resources */,
+				AEB8EFE42162C69D0032B574 /* RamaGothicE_Thin.otf in Resources */,
+				AEB8EFE92162C69D0032B574 /* RamaGothicM_SemiBold.otf in Resources */,
+				AEB8EFDE2162C69D0032B574 /* RamaGothicE_Heavy.otf in Resources */,
+				AEB8EFEA2162C69D0032B574 /* RamaGothicC_Regular.otf in Resources */,
+				AEB8EFE62162C69D0032B574 /* RamaGothicC_Thin.otf in Resources */,
+				AEB8EFE02162C69D0032B574 /* RamaGothicC_Bold.otf in Resources */,
+				AEB8EFE32162C69D0032B574 /* RamaGothicM_Thin.otf in Resources */,
 				AE50C6672156022C00C7352E /* Main.storyboard in Resources */,
+				AEB8EFE12162C69D0032B574 /* RamaGothicE_Light.otf in Resources */,
+				AEB8EFED2162C69D0032B574 /* RamaGothicC_SemiBold.otf in Resources */,
+				AEB8EFDF2162C69D0032B574 /* RamaGothicM_Heavy.otf in Resources */,
+				AEB8EFE52162C69D0032B574 /* RamaGothicM_Regular.otf in Resources */,
+				AEB8EFEE2162C69D0032B574 /* RamaGothicC_Light.otf in Resources */,
+				AEB8EFE82162C69D0032B574 /* RamaGothicE_Bold.otf in Resources */,
+				AEB8EFEC2162C69D0032B574 /* RamaGothicM_Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

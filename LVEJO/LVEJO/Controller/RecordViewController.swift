@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RecordViewController: UIViewController {
 
@@ -15,7 +16,6 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var peopleCount: UILabel!
     @IBOutlet weak var bicyclistsCount: UILabel!
     @IBOutlet weak var smallCount: UILabel!
-    
     
     // Stepper
     // Hitting the plus and minus buttons will change the
@@ -44,6 +44,8 @@ class RecordViewController: UIViewController {
     
     // Date & Time
     
+    @IBAction func dateAndTimeRecord(_ sender: Any) {
+    }
     
     
     
@@ -54,6 +56,13 @@ class RecordViewController: UIViewController {
         
     }
     
-
+    
+    // Log Out
+    
+    @IBAction func logOutPressed(_ sender: Any) {
+        
+    }
+    
+    
 
 }
