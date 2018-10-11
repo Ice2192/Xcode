@@ -12,6 +12,7 @@ import Firebase
 class RegisterViewController: UIViewController {
 
     
+    @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var repassTextfield: UITextField!
@@ -27,21 +28,30 @@ class RegisterViewController: UIViewController {
         
         // Set up new user in Firebase
         
-        Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) {
+        if (repassTextfield.text == passwordTextfield.text){        // Check if password retyped match
             
-            (user, error) in
-            
-            if error != nil {
-                print(error!)
-            }
-            
-            else {
-                print("Registration Successful!")
+            Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) {
                 
-                self.performSegue(withIdentifier: "goToRecord", sender: self)
+                (user, error) in
+                
+                if error != nil {
+                    
+                    
+                    
+                    print(error!)
+                }
+                    
+                else {
+                    print("Registration Successful!")
+                    
+                    self.performSegue(withIdentifier: "goToRecord", sender: self)
+                }
+                
             }
             
         }
+        
+        
         
     }
     
