@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WelcomeViewController.swift
 //  LVEJO
 //
 //  Created by Kevin Alonzo on 9/21/18.
@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
     
     

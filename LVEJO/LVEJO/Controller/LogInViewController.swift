@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class LogInViewController: UIViewController, UITextFieldDelegate {
 
@@ -23,6 +24,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
         
         // Do any additional setup after loading the view.
+        
+        // Clear the user when this page loads
+        
     }
     
 

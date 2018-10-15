@@ -107,6 +107,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logInPressed:" destination="PeZ-t5-5nN" eventType="touchUpInside" id="hzZ-yp-eEX"/>
+                                    <segue destination="c4k-q6-H38" kind="show" identifier="goToRecord" id="6sx-Po-XdO"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62x-dP-h3S">
@@ -179,7 +180,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="TYy-Mu-HVG" id="a5w-kB-equ"/>
                         <outlet property="passwordTextField" destination="O77-lQ-Ghg" id="SBO-ix-see"/>
-                        <segue destination="icn-db-8Gu" kind="show" identifier="goToRecord" id="7tr-aA-dOf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOm-A5-hW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -209,6 +209,7 @@
                                 </state>
                                 <connections>
                                     <action selector="registerPressed:" destination="q6U-Xg-UsG" eventType="touchUpInside" id="FHx-bV-WQQ"/>
+                                    <segue destination="c4k-q6-H38" kind="show" identifier="goToRecord" id="YJe-jE-jaA"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj3-OD-tew">
@@ -319,244 +320,40 @@
                     <connections>
                         <outlet property="emailTextfield" destination="64n-5a-vWd" id="x6b-pW-Sk6"/>
                         <outlet property="fullNameTextField" destination="0sd-IK-uu8" id="OeU-Tn-VsU"/>
+                        <outlet property="passNoMatch" destination="oBv-aa-ckP" id="C9P-8o-d94"/>
                         <outlet property="passwordTextfield" destination="L4x-Lr-BRa" id="F5R-Qy-VJQ"/>
                         <outlet property="phoneTextfield" destination="MGy-0g-T5o" id="cgG-aQ-3cN"/>
                         <outlet property="repassTextfield" destination="Zxu-cb-uuq" id="Odm-wq-TSC"/>
-                        <segue destination="icn-db-8Gu" kind="show" identifier="goToRecord" id="Tj7-md-zoh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4g-5v-JFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1323.1884057971015" y="366.84782608695656"/>
         </scene>
-        <!--Record-->
-        <scene sceneID="Dit-fG-nE3">
+        <!--Record Controller-->
+        <scene sceneID="8cI-Js-AFJ">
             <objects>
-                <viewController title="Record" id="icn-db-8Gu" userLabel="Record" customClass="RecordViewController" customModule="LVEJO" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wii-iF-OXx">
+                <viewController title="Record" id="c4k-q6-H38" userLabel="Record Controller" customClass="RecordViewController" customModule="LVEJO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4QN-Jp-XrG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-25-vYy" userLabel="People Child Stack View">
-                                <rect key="frame" x="16" y="202" width="382" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-1k-BlU" userLabel="Trucks Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJU-Kr-gng">
-                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nX2-f5-Ub9" userLabel="Truck Stepper">
-                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="peopleChildStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="rC3-MT-Jwf"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-9c-KYI" userLabel="People Youth Stack View">
-                                <rect key="frame" x="16" y="239" width="382" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-L0-JFr" userLabel="People Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lc-Za-wL6">
-                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="brg-fz-HZ2" userLabel="People Stepper">
-                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="peopleYouthStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="B1T-ab-PlF"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-fP-2ku" userLabel="People Adult Stack View">
-                                <rect key="frame" x="16" y="276" width="382" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rP-xl-OOM" userLabel="Bicyclists Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ri-Mi-Brc">
-                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VvY-Or-gCK" userLabel="Bicyclists Stepper">
-                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="peopleAdultStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="FGg-kf-he5"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-au-S0v" userLabel="People Senior Stack View">
-                                <rect key="frame" x="16" y="313" width="382" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Vj-STc" userLabel="Smell Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baa-7M-Zr8">
-                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="t2p-VE-mqg">
-                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="peopleSeniorStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="LCn-tp-Ql1"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLt-05-Yzm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0o-Iq-mdg">
                                 <rect key="frame" x="0.0" y="691" width="414" height="45"/>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.61960784310000006" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="U5K-ak-4Nc"/>
+                                    <constraint firstAttribute="height" constant="45" id="Tl1-8A-tQg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="Submit:" destination="icn-db-8Gu" eventType="touchUpInside" id="HtF-GZ-YTn"/>
+                                    <action selector="Submit:" destination="c4k-q6-H38" eventType="touchUpInside" id="UnF-rN-Hzf"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="9K9-yt-mTq" userLabel="Bicyclists Child Stack View">
-                                <rect key="frame" x="16" y="401" width="382" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4V-pn-xCA" userLabel="Trucks Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7Z-nr-wis">
-                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="502-Kz-SJR" userLabel="Truck Stepper">
-                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="bicyclistsChildStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="GLd-m4-3dz"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="xWF-qB-ZUc" userLabel="Bicyclists Youth Stack View">
-                                <rect key="frame" x="16" y="438" width="382" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaI-k9-tNV" userLabel="People Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIc-JH-1ew">
-                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-Rd-oGu" userLabel="People Stepper">
-                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="bicyclistsYouthStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="4B7-lW-Ewb"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="njM-41-Q4x" userLabel="Bicyclists Adult Stack View">
-                                <rect key="frame" x="16" y="475" width="382" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JId-XI-M0o" userLabel="Bicyclists Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-cT-YNA">
-                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5ps-WC-VTr" userLabel="Bicyclists Stepper">
-                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="bicyclistsAdultStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="4h7-F2-co7"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-0r-Gbi" userLabel="Bicyclists Snior Stack View">
-                                <rect key="frame" x="16" y="512" width="382" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60L-GT-ZBG" userLabel="Smell Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
-                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6D-Rs-oMg">
-                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="biq-BF-Zwk">
-                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="bicyclistsSeniorStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="Rsg-bc-BSS"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-eG-UK9" userLabel="People Label">
-                                <rect key="frame" x="16" y="158" width="382" height="36"/>
-                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bicyclists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtK-ra-oWu" userLabel="Bicyclists Label">
-                                <rect key="frame" x="16" y="357" width="382" height="36"/>
-                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="dx9-Of-sT1" userLabel="Trucks Stack View">
-                                <rect key="frame" x="16" y="114" width="382" height="29"/>
+                                <rect key="frame" x="16" y="94" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMn-eE-f0d" userLabel="Trucks Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -574,88 +371,310 @@
                                         <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <action selector="truckStepper:" destination="icn-db-8Gu" eventType="valueChanged" id="b5R-wx-iJz"/>
+                                            <action selector="truckStepper:" destination="c4k-q6-H38" eventType="valueChanged" id="kDa-Or-bzd"/>
                                         </connections>
                                     </stepper>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="DUZ-lC-lra"/>
+                                </constraints>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SZv-3n-sC1">
-                                <rect key="frame" x="264" y="561" width="118" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7B-kS-Npu">
-                                <rect key="frame" x="26" y="557" width="49" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-25-vYy" userLabel="People Child Stack View">
+                                <rect key="frame" x="16" y="182" width="382" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-1k-BlU" userLabel="Trucks Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJU-Kr-gng">
+                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nX2-f5-Ub9" userLabel="People Child Stepper">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="peopleChildStepper:" destination="c4k-q6-H38" eventType="valueChanged" id="h1c-oH-Awj"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="4Sw-2R-XOZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-9c-KYI" userLabel="People Youth Stack View">
+                                <rect key="frame" x="16" y="219" width="382" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-L0-JFr" userLabel="People Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lc-Za-wL6">
+                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="brg-fz-HZ2" userLabel="People Youth Stepper">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="peopleYouthStepper:" destination="c4k-q6-H38" eventType="valueChanged" id="X7R-QO-Wac"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Inh-Qh-2QL"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-fP-2ku" userLabel="People Adult Stack View">
+                                <rect key="frame" x="16" y="256" width="382" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rP-xl-OOM" userLabel="Bicyclists Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ri-Mi-Brc">
+                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VvY-Or-gCK" userLabel="People Adult Stepper">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="peopleAdultStepper:" destination="c4k-q6-H38" eventType="valueChanged" id="gO1-p5-Ten"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="1ym-ry-rfD"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-au-S0v" userLabel="People Senior Stack View">
+                                <rect key="frame" x="16" y="293" width="382" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Vj-STc" userLabel="Smell Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baa-7M-Zr8">
+                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="t2p-VE-mqg" userLabel="People Senior Stepper">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="peopleSeniorStepper:" destination="c4k-q6-H38" eventType="valueChanged" id="zNT-Wg-xlT"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="rjP-0r-8W8"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="9K9-yt-mTq" userLabel="Bicyclists Child Stack View">
+                                <rect key="frame" x="16" y="381" width="382" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4V-pn-xCA" userLabel="Trucks Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7Z-nr-wis">
+                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="502-Kz-SJR" userLabel="Bicyclists Child Stepper">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="bicyclistsChildStepper:" destination="c4k-q6-H38" eventType="valueChanged" id="W9G-Nj-Hgu"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="n8Y-19-UJb"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="xWF-qB-ZUc" userLabel="Bicyclists Youth Stack View">
+                                <rect key="frame" x="16" y="418" width="382" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaI-k9-tNV" userLabel="People Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIc-JH-1ew">
+                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-Rd-oGu" userLabel="Bicyclists Youth Stepper">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="bicyclistsYouthStepper:" destination="c4k-q6-H38" eventType="valueChanged" id="C0K-h5-lK9"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="wjp-Jl-0Xt"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="njM-41-Q4x" userLabel="Bicyclists Adult Stack View">
+                                <rect key="frame" x="16" y="455" width="382" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JId-XI-M0o" userLabel="Bicyclists Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-cT-YNA">
+                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5ps-WC-VTr" userLabel="Bicyclists Adult Stepper">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="bicyclistsAdultStepper:" destination="c4k-q6-H38" eventType="valueChanged" id="HgO-lA-0Mb"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="iXQ-F2-QL2"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-0r-Gbi" userLabel="Bicyclists Snior Stack View">
+                                <rect key="frame" x="16" y="492" width="382" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60L-GT-ZBG" userLabel="Smell Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
+                                        <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6D-Rs-oMg">
+                                        <rect key="frame" x="137.66666666666666" y="0.0" width="106.66666666666666" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="biq-BF-Zwk" userLabel="Bicyclists Senior Stepper">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="bicyclistsSeniorStepper:" destination="c4k-q6-H38" eventType="valueChanged" id="RzM-y4-JiD"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="dXn-NG-6gN"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-eG-UK9" userLabel="People Label">
+                                <rect key="frame" x="16" y="138" width="382" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Gvt-z0-7wG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bicyclists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtK-ra-oWu" userLabel="Bicyclists Label">
+                                <rect key="frame" x="16" y="337" width="382" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="iYR-vq-Wbk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eka-az-c2v">
+                                <rect key="frame" x="0.0" y="528" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Yva-eG-UK9" firstAttribute="top" secondItem="dx9-Of-sT1" secondAttribute="bottom" constant="15" id="06R-zW-qgA"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="lLi-25-vYy" secondAttribute="trailing" constant="16" id="0y3-pa-UUZ"/>
-                            <constraint firstItem="DLI-au-S0v" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="1mO-jK-bpZ"/>
-                            <constraint firstItem="DLI-au-S0v" firstAttribute="top" secondItem="pYi-fP-2ku" secondAttribute="bottom" constant="8" id="6oE-Pw-JH7"/>
-                            <constraint firstAttribute="bottom" secondItem="gLt-05-Yzm" secondAttribute="bottom" id="8Ih-o8-XOb"/>
-                            <constraint firstAttribute="trailing" secondItem="gLt-05-Yzm" secondAttribute="trailing" id="9FO-Jb-ds3"/>
-                            <constraint firstItem="pYi-fP-2ku" firstAttribute="top" secondItem="tBT-9c-KYI" secondAttribute="bottom" constant="8" id="DgQ-LQ-Zsc"/>
-                            <constraint firstItem="a4k-0r-Gbi" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="FFG-3F-Qzk"/>
-                            <constraint firstItem="Yva-eG-UK9" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="Hiy-h2-7PK"/>
-                            <constraint firstItem="dx9-Of-sT1" firstAttribute="top" secondItem="2HU-Lo-wZm" secondAttribute="top" constant="50" id="ICa-rU-Naj"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="tBT-9c-KYI" secondAttribute="trailing" constant="16" id="K82-cL-GJU"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="dx9-Of-sT1" secondAttribute="trailing" constant="16" id="LhJ-rd-Ww0"/>
-                            <constraint firstItem="njM-41-Q4x" firstAttribute="top" secondItem="xWF-qB-ZUc" secondAttribute="bottom" constant="8" id="PnP-2Y-08q"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="pYi-fP-2ku" secondAttribute="trailing" constant="16" id="RDv-Ij-6gj"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="a4k-0r-Gbi" secondAttribute="trailing" constant="16" id="RHJ-DF-Uiu"/>
-                            <constraint firstItem="xWF-qB-ZUc" firstAttribute="top" secondItem="9K9-yt-mTq" secondAttribute="bottom" constant="8" id="RaG-RX-SJo"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="qtK-ra-oWu" secondAttribute="trailing" constant="16" id="SxR-q0-tzj"/>
-                            <constraint firstItem="9K9-yt-mTq" firstAttribute="top" secondItem="qtK-ra-oWu" secondAttribute="bottom" constant="8" id="VMg-bR-sVp"/>
-                            <constraint firstItem="tBT-9c-KYI" firstAttribute="top" secondItem="lLi-25-vYy" secondAttribute="bottom" constant="8" id="Why-oB-qNg"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="njM-41-Q4x" secondAttribute="trailing" constant="16" id="X8T-WW-4vu"/>
-                            <constraint firstItem="qtK-ra-oWu" firstAttribute="top" secondItem="DLI-au-S0v" secondAttribute="bottom" constant="15" id="a6X-v4-CTm"/>
-                            <constraint firstItem="lLi-25-vYy" firstAttribute="top" secondItem="Yva-eG-UK9" secondAttribute="bottom" constant="8" id="aAJ-22-p6L"/>
-                            <constraint firstItem="gLt-05-Yzm" firstAttribute="leading" secondItem="Wii-iF-OXx" secondAttribute="leading" id="b9l-ZH-heo"/>
-                            <constraint firstItem="qtK-ra-oWu" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="bGP-A2-jtx"/>
-                            <constraint firstItem="lLi-25-vYy" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="c4f-hU-PAf"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="9K9-yt-mTq" secondAttribute="trailing" constant="16" id="c7I-pb-oPd"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="xWF-qB-ZUc" secondAttribute="trailing" constant="16" id="c7r-dG-0up"/>
-                            <constraint firstItem="njM-41-Q4x" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="eac-N6-HCu"/>
-                            <constraint firstItem="a4k-0r-Gbi" firstAttribute="top" secondItem="njM-41-Q4x" secondAttribute="bottom" constant="8" id="hlJ-sL-Lka"/>
-                            <constraint firstItem="tBT-9c-KYI" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="ldv-UK-kP1"/>
-                            <constraint firstItem="9K9-yt-mTq" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="qC7-VI-rYR"/>
-                            <constraint firstItem="pYi-fP-2ku" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="qqS-R1-p1U"/>
-                            <constraint firstItem="xWF-qB-ZUc" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="sIU-6Z-esv"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="Yva-eG-UK9" secondAttribute="trailing" constant="16" id="uB2-Wh-kOQ"/>
-                            <constraint firstItem="dx9-Of-sT1" firstAttribute="leading" secondItem="2HU-Lo-wZm" secondAttribute="leading" constant="16" id="wT8-3E-pzQ"/>
-                            <constraint firstItem="2HU-Lo-wZm" firstAttribute="trailing" secondItem="DLI-au-S0v" secondAttribute="trailing" constant="16" id="yBN-2E-CMi"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="pYi-fP-2ku" secondAttribute="trailing" constant="16" id="1GE-45-I7K"/>
+                            <constraint firstItem="Yva-eG-UK9" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="3D7-Ko-Ja4"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="lLi-25-vYy" secondAttribute="trailing" constant="16" id="43P-hr-oMU"/>
+                            <constraint firstItem="G0o-Iq-mdg" firstAttribute="bottom" secondItem="lBd-Y4-1d1" secondAttribute="bottom" id="4vj-s2-TlY"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="qtK-ra-oWu" secondAttribute="trailing" constant="16" id="6dP-cd-zLQ"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="xWF-qB-ZUc" secondAttribute="trailing" constant="16" id="7B9-oB-CEt"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="Yva-eG-UK9" secondAttribute="trailing" constant="16" id="Dab-a6-1oZ"/>
+                            <constraint firstItem="njM-41-Q4x" firstAttribute="top" secondItem="xWF-qB-ZUc" secondAttribute="bottom" constant="8" id="E2T-QL-JTX"/>
+                            <constraint firstItem="a4k-0r-Gbi" firstAttribute="top" secondItem="njM-41-Q4x" secondAttribute="bottom" constant="8" id="Ggb-k6-IBh"/>
+                            <constraint firstItem="Yva-eG-UK9" firstAttribute="top" secondItem="dx9-Of-sT1" secondAttribute="bottom" constant="15" id="HE4-qs-b0V"/>
+                            <constraint firstItem="xWF-qB-ZUc" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="JDL-he-F0w"/>
+                            <constraint firstItem="a4k-0r-Gbi" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="Jap-2x-t5f"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="tBT-9c-KYI" secondAttribute="trailing" constant="16" id="NHD-Nc-oFE"/>
+                            <constraint firstItem="9K9-yt-mTq" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="O3c-t4-cv0"/>
+                            <constraint firstItem="tBT-9c-KYI" firstAttribute="top" secondItem="lLi-25-vYy" secondAttribute="bottom" constant="8" id="QUC-dF-Uus"/>
+                            <constraint firstItem="qtK-ra-oWu" firstAttribute="top" secondItem="DLI-au-S0v" secondAttribute="bottom" constant="15" id="QWg-c5-RRW"/>
+                            <constraint firstItem="lLi-25-vYy" firstAttribute="top" secondItem="Yva-eG-UK9" secondAttribute="bottom" constant="8" id="SG8-P7-pvY"/>
+                            <constraint firstItem="lLi-25-vYy" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="UqY-Fh-3yc"/>
+                            <constraint firstItem="DLI-au-S0v" firstAttribute="top" secondItem="pYi-fP-2ku" secondAttribute="bottom" constant="8" id="YJH-Ox-zjq"/>
+                            <constraint firstItem="dx9-Of-sT1" firstAttribute="top" secondItem="lBd-Y4-1d1" secondAttribute="top" constant="30" id="ZSL-d3-LfR"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="9K9-yt-mTq" secondAttribute="trailing" constant="16" id="cVz-2f-ivF"/>
+                            <constraint firstItem="9K9-yt-mTq" firstAttribute="top" secondItem="qtK-ra-oWu" secondAttribute="bottom" constant="8" id="dIZ-Hi-Ag1"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="a4k-0r-Gbi" secondAttribute="trailing" constant="16" id="ebM-vw-Wh1"/>
+                            <constraint firstItem="G0o-Iq-mdg" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" id="ego-le-h14"/>
+                            <constraint firstItem="pYi-fP-2ku" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="fbL-3d-RMx"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="DLI-au-S0v" secondAttribute="trailing" constant="16" id="hSd-MG-YKN"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="njM-41-Q4x" secondAttribute="trailing" constant="16" id="iak-v0-tqP"/>
+                            <constraint firstItem="G0o-Iq-mdg" firstAttribute="trailing" secondItem="lBd-Y4-1d1" secondAttribute="trailing" id="kvG-Ak-SK1"/>
+                            <constraint firstItem="tBT-9c-KYI" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="qmn-gr-tRP"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="dx9-Of-sT1" secondAttribute="trailing" constant="16" id="qy3-on-8rr"/>
+                            <constraint firstItem="xWF-qB-ZUc" firstAttribute="top" secondItem="9K9-yt-mTq" secondAttribute="bottom" constant="8" id="rsm-bx-1l8"/>
+                            <constraint firstItem="dx9-Of-sT1" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="sQx-ri-PJz"/>
+                            <constraint firstItem="qtK-ra-oWu" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="vTO-H3-tkI"/>
+                            <constraint firstItem="pYi-fP-2ku" firstAttribute="top" secondItem="tBT-9c-KYI" secondAttribute="bottom" constant="8" id="x2p-vW-xJB"/>
+                            <constraint firstItem="DLI-au-S0v" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="xcg-tj-Mz7"/>
+                            <constraint firstItem="njM-41-Q4x" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="zHB-cl-Wpr"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2HU-Lo-wZm"/>
+                        <viewLayoutGuide key="safeArea" id="lBd-Y4-1d1"/>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Record" id="Zao-mA-Erb">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="4ke-31-tI6">
-                            <connections>
-                                <action selector="logOutPressed:" destination="icn-db-8Gu" id="TKD-Ck-M6d"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="bicyclistsAdultCount" destination="bu2-cT-YNA" id="gdH-As-Lew"/>
-                        <outlet property="bicyclistsChildCount" destination="W7Z-nr-wis" id="o58-4k-Dbd"/>
-                        <outlet property="bicyclistsSeniorCount" destination="g6D-Rs-oMg" id="vJj-ng-Rmn"/>
-                        <outlet property="bicyclistsYouthCount" destination="rIc-JH-1ew" id="Xa8-PQ-3cq"/>
-                        <outlet property="peopleAdultCount" destination="1Ri-Mi-Brc" id="zIn-Vu-zb9"/>
-                        <outlet property="peopleChildCount" destination="kJU-Kr-gng" id="QDJ-yJ-iAs"/>
-                        <outlet property="peopleSeniorCount" destination="Baa-7M-Zr8" id="mnj-zq-uCo"/>
-                        <outlet property="peopleYouthCount" destination="7lc-Za-wL6" id="yIs-WU-UWa"/>
-                        <outlet property="truckCount" destination="lju-Lw-ZvV" id="2IJ-8e-gIx"/>
+                        <outlet property="bicyclistsAdultCount" destination="bu2-cT-YNA" id="UdA-RA-dad"/>
+                        <outlet property="bicyclistsChildCount" destination="W7Z-nr-wis" id="Oyx-QN-N3y"/>
+                        <outlet property="bicyclistsSeniorCount" destination="g6D-Rs-oMg" id="Z5F-P7-knv"/>
+                        <outlet property="bicyclistsYouthCount" destination="rIc-JH-1ew" id="GaX-vu-kLe"/>
+                        <outlet property="peopleAdultCount" destination="1Ri-Mi-Brc" id="fBL-yO-uc2"/>
+                        <outlet property="peopleChildCount" destination="kJU-Kr-gng" id="LeM-ew-lN8"/>
+                        <outlet property="peopleSeniorCount" destination="Baa-7M-Zr8" id="qnJ-wY-Sq9"/>
+                        <outlet property="peopleYouthCount" destination="7lc-Za-wL6" id="TS7-wQ-5qZ"/>
+                        <outlet property="smellDropdown" destination="eka-az-c2v" id="CgJ-0i-Pdv"/>
+                        <outlet property="truckCount" destination="lju-Lw-ZvV" id="xKp-WV-Q12"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U1e-XP-wYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3KH-nO-WNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2107.2463768115945" y="9.7826086956521738"/>
+            <point key="canvasLocation" x="2119" y="11"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m0a-WX-HkG">
@@ -681,6 +700,6 @@
         <image name="Welcome" width="853.33331298828125" height="632.66668701171875"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tj7-md-zoh"/>
+        <segue reference="YJe-jE-jaA"/>
     </inferredMetricsTieBreakers>
 </document>

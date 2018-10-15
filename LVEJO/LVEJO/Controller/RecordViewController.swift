@@ -8,15 +8,11 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class RecordViewController: UIViewController {
 
     // Record Count Labels
-//    @IBOutlet weak var truckCount: UILabel!
-//    @IBOutlet weak var peopleCount: UILabel!
-//    @IBOutlet weak var bicyclistsCount: UILabel!
-//    @IBOutlet weak var smallCount: UILabel!
-    
     @IBOutlet weak var truckCount: UILabel!
     @IBOutlet weak var peopleChildCount: UILabel!
     @IBOutlet weak var peopleYouthCount: UILabel!
@@ -28,28 +24,8 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var bicyclistsSeniorCount: UILabel!
     
     // Stepper
-    // Hitting the plus and minus buttons will change the
+    // Hitting the plus/minus buttons will change the
     // count value of the item.
-//    @IBAction func truckStepper(_ sender: UIStepper) {
-//        var truckNum = 0
-//        truckNum = Int(sender.value)
-//        truckCount.text = String(truckNum)
-//    }
-//    @IBAction func peopleStepper(_ sender: UIStepper) {
-//        var peopleNum = 0
-//        peopleNum = Int(sender.value)
-//        peopleCount.text = String(peopleNum)
-//    }
-//    @IBAction func bicyclistsStepper(_ sender: UIStepper) {
-//        var bicyclistsNum = 0
-//        bicyclistsNum = Int(sender.value)
-//        bicyclistsCount.text = String(bicyclistsNum)
-//    }
-//    @IBAction func smellStepper(_ sender: UIStepper) {
-//        var smellNum = 0
-//        smellNum = Int(sender.value)
-//        smallCount.text = String(smellNum)
-//    }
     
     //TODO: TRUCK COUNT
     @IBAction func truckStepper(_ sender: UIStepper) {
@@ -64,19 +40,16 @@ class RecordViewController: UIViewController {
         peopleChildNum = Int(sender.value)
         peopleChildCount.text = String(peopleChildNum)
     }
-    
     @IBAction func peopleYouthStepper(_ sender: UIStepper) {
         var peopleYouthNum = 0
         peopleYouthNum = Int(sender.value)
         peopleYouthCount.text = String(peopleYouthNum)
     }
-    
     @IBAction func peopleAdultStepper(_ sender: UIStepper) {
         var peopleAdultNum = 0
         peopleAdultNum = Int(sender.value)
         peopleAdultCount.text = String(peopleAdultNum)
     }
-    
     @IBAction func peopleSeniorStepper(_ sender: UIStepper) {
         var peopleSeniorNum = 0
         peopleSeniorNum = Int(sender.value)
@@ -106,31 +79,45 @@ class RecordViewController: UIViewController {
         bicyclistsSeniorCount.text = String(bicyclistsSeniorNum)
     }
     
+    // Smell Dropdown
+    
+    @IBOutlet weak var smellDropdown: UIPickerView!
+    
+    var smellList = ["Light", "Moderate", "Intense"]
     
     // Submit Button
     @IBAction func Submit(_ sender: Any) {
         print("Truck Count: ", truckCount as Any)       // test - remove when done
         
-        // Get date and time
+        //TODO: GET DATE & TIME
         
-        // Get GPS Location
+        //TODO: GET GPS
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(logOutPressed))
     }
-    
     
     // Log Out
     
-    @IBAction func logOutPressed(_ sender: Any) {
+    @objc func logOutPressed() {
+        do {
+            try Auth.auth().signOut()
+            let welcomeViewController = WelcomeViewController()
+            let welcomeViewNavigationController = UINavigationController(rootViewController: welcomeViewController)
+            self.present(welcomeViewNavigationController, animated: true, completion: nil)
+            
+            
+            
+        } catch let err {
+            print(err)
+        }
         
+        
+        
+            
     }
-    
-    
-
 }

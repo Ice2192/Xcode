@@ -18,10 +18,13 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var repassTextfield: UITextField!
     @IBOutlet weak var phoneTextfield: UITextField!
     
+    @IBOutlet weak var passNoMatch: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        passNoMatch.isHidden = true
     }
     
     @IBAction func registerPressed(_ sender: Any) {
@@ -35,22 +38,18 @@ class RegisterViewController: UIViewController {
                 (user, error) in
                 
                 if error != nil {
-                    
-                    
-                    
                     print(error!)
                 }
                     
                 else {
                     print("Registration Successful!")
-                    
                     self.performSegue(withIdentifier: "goToRecord", sender: self)
                 }
-                
             }
-            
         }
-        
+        else {
+            passNoMatch.isHidden = false
+        }
         
         
     }

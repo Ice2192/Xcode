@@ -12,7 +12,7 @@
 		AE396C38215C4E1300FFC0EC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE396C37215C4E1300FFC0EC /* RegisterViewController.swift */; };
 		AE396C3A215C519000FFC0EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE396C39215C519000FFC0EC /* GoogleService-Info.plist */; };
 		AE50C6622156022C00C7352E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50C6612156022C00C7352E /* AppDelegate.swift */; };
-		AE50C6642156022C00C7352E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50C6632156022C00C7352E /* ViewController.swift */; };
+		AE50C6642156022C00C7352E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50C6632156022C00C7352E /* WelcomeViewController.swift */; };
 		AE50C6672156022C00C7352E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE50C6652156022C00C7352E /* Main.storyboard */; };
 		AE50C6692156022C00C7352E /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE50C6682156022C00C7352E /* Image.xcassets */; };
 		AE50C66C2156022C00C7352E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE50C66A2156022C00C7352E /* LaunchScreen.storyboard */; };
@@ -45,7 +45,7 @@
 		AE396C39215C519000FFC0EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE50C65E2156022C00C7352E /* LVEJO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LVEJO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE50C6612156022C00C7352E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE50C6632156022C00C7352E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE50C6632156022C00C7352E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AE50C6662156022C00C7352E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE50C6682156022C00C7352E /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		AE50C66B2156022C00C7352E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				AE50C6612156022C00C7352E /* AppDelegate.swift */,
-				AE50C6632156022C00C7352E /* ViewController.swift */,
+				AE50C6632156022C00C7352E /* WelcomeViewController.swift */,
 				AE396C35215C4E0800FFC0EC /* LogInViewController.swift */,
 				AE396C37215C4E1300FFC0EC /* RegisterViewController.swift */,
 				AE61BF1C215C331C000D030C /* RecordViewController.swift */,
@@ -330,7 +330,7 @@
 				AE396C36215C4E0800FFC0EC /* LogInViewController.swift in Sources */,
 				AE396C38215C4E1300FFC0EC /* RegisterViewController.swift in Sources */,
 				AE61BF1D215C331C000D030C /* RecordViewController.swift in Sources */,
-				AE50C6642156022C00C7352E /* ViewController.swift in Sources */,
+				AE50C6642156022C00C7352E /* WelcomeViewController.swift in Sources */,
 				AE50C6622156022C00C7352E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
