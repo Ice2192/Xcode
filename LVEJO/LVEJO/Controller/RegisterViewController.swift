@@ -11,6 +11,7 @@ import Firebase
 
 class RegisterViewController: UIViewController {
 
+    // Github test
     
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
@@ -22,7 +23,6 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         passNoMatch.isHidden = true
     }
