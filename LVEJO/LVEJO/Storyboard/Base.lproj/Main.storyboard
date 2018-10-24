@@ -694,10 +694,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LVEJO Brand &amp; Logo" width="187" height="67"/>
-        <image name="Log In" width="564" height="1003"/>
-        <image name="Register" width="500" height="750"/>
-        <image name="Welcome" width="853.33331298828125" height="632.66668701171875"/>
+        <image name="LVEJO Brand &amp; Logo" width="62" height="22"/>
+        <image name="Log In" width="188" height="334"/>
+        <image name="Register" width="166" height="250"/>
+        <image name="Welcome" width="853" height="632"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6sx-Po-XdO"/>
