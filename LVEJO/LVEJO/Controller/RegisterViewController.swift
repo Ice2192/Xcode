@@ -10,15 +10,12 @@ import UIKit
 import Firebase
 
 class RegisterViewController: UIViewController {
-
-    // Github test
     
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var repassTextfield: UITextField!
     @IBOutlet weak var phoneTextfield: UITextField!
-    
     @IBOutlet weak var passNoMatch: UILabel!
     
     override func viewDidLoad() {

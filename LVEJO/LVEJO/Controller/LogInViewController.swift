@@ -35,6 +35,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
 
+    
+    
     // Log in the user
     
     @IBAction func logInPressed(_ sender: Any) {
