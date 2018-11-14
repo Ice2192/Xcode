@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class RecordViewController: UIViewController {
+class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     // Record Count Labels
     @IBOutlet weak var truckCount: UILabel!
@@ -22,6 +22,7 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var bicyclistsYouthCount: UILabel!
     @IBOutlet weak var bicyclistsAdultCount: UILabel!
     @IBOutlet weak var bicyclistsSeniorCount: UILabel!
+    @IBOutlet weak var intensityLabel: UILabel!
     
     // Stepper
     // Hitting the plus/minus buttons will change the
@@ -79,11 +80,27 @@ class RecordViewController: UIViewController {
         bicyclistsSeniorCount.text = String(bicyclistsSeniorNum)
     }
     
-    // Smell Dropdown
+    // Smell Intensity
+    @IBOutlet weak var smellLabel: UILabel!
+    @IBOutlet weak var smellPickerView: UIPickerView!
     
-    @IBOutlet weak var smellDropdown: UIPickerView!
+    let smell = ["Light", "Moderate", "Intense"]
     
-    var smellList = ["Light", "Moderate", "Intense"]
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return smell[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return smell.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        smellLabel.text = smell[row]
+    }
     
     // Submit Button
     @IBAction func Submit(_ sender: Any) {
@@ -92,7 +109,6 @@ class RecordViewController: UIViewController {
         //TODO: GET DATE & TIME
         
         //TODO: GET GPS
-        
     }
     
     override func viewDidLoad() {
