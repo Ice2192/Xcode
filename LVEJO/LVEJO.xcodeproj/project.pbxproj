@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		78D46F989376D6F40C5BD99E /* Pods_LVEJO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8AB7B6FD524EE28F8564DC /* Pods_LVEJO.framework */; };
 		AE396C36215C4E0800FFC0EC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE396C35215C4E0800FFC0EC /* LogInViewController.swift */; };
-		AE396C38215C4E1300FFC0EC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE396C37215C4E1300FFC0EC /* RegisterViewController.swift */; };
 		AE396C3A215C519000FFC0EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE396C39215C519000FFC0EC /* GoogleService-Info.plist */; };
 		AE50C6622156022C00C7352E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50C6612156022C00C7352E /* AppDelegate.swift */; };
 		AE50C6642156022C00C7352E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50C6632156022C00C7352E /* WelcomeViewController.swift */; };
@@ -41,7 +40,6 @@
 		021757F8EA9783962459EB4F /* Pods-LVEJO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVEJO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LVEJO/Pods-LVEJO.debug.xcconfig"; sourceTree = "<group>"; };
 		9CC5696AF34D7A2CA2D96335 /* Pods-LVEJO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVEJO.release.xcconfig"; path = "Pods/Target Support Files/Pods-LVEJO/Pods-LVEJO.release.xcconfig"; sourceTree = "<group>"; };
 		AE396C35215C4E0800FFC0EC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		AE396C37215C4E1300FFC0EC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE396C39215C519000FFC0EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE50C65E2156022C00C7352E /* LVEJO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LVEJO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE50C6612156022C00C7352E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 				AE50C6612156022C00C7352E /* AppDelegate.swift */,
 				AE50C6632156022C00C7352E /* WelcomeViewController.swift */,
 				AE396C35215C4E0800FFC0EC /* LogInViewController.swift */,
-				AE396C37215C4E1300FFC0EC /* RegisterViewController.swift */,
 				AE61BF1C215C331C000D030C /* RecordViewController.swift */,
 			);
 			path = Controller;
@@ -328,7 +325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE396C36215C4E0800FFC0EC /* LogInViewController.swift in Sources */,
-				AE396C38215C4E1300FFC0EC /* RegisterViewController.swift in Sources */,
 				AE61BF1D215C331C000D030C /* RecordViewController.swift in Sources */,
 				AE50C6642156022C00C7352E /* WelcomeViewController.swift in Sources */,
 				AE50C6622156022C00C7352E /* AppDelegate.swift in Sources */,

@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import CoreLocation
 
-class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate {
 
     // Record Count Labels
     @IBOutlet weak var truckCount: UILabel!
@@ -22,7 +23,6 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var bicyclistsYouthCount: UILabel!
     @IBOutlet weak var bicyclistsAdultCount: UILabel!
     @IBOutlet weak var bicyclistsSeniorCount: UILabel!
-    @IBOutlet weak var intensityLabel: UILabel!
     
     // Stepper
     // Hitting the plus/minus buttons will change the
@@ -58,7 +58,7 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     
-    //TODO: BYCYCLISTS COUNT
+    //TODO: BICYCLISTS COUNT
     @IBAction func bicyclistsChildStepper(_ sender: UIStepper) {
         var bicyclistsChildNum = 0
         bicyclistsChildNum = Int(sender.value)
@@ -106,7 +106,23 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBAction func Submit(_ sender: Any) {
         print("Truck Count: ", truckCount as Any)       // test - remove when done
         
-        //TODO: GET DATE & TIME
+        //DATE & TIME
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let seconds = calendar.component(.second, from: date)
+        // Check if it works
+        print("\(hour):\(minutes):\(seconds)")
+        
+        let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        // Check if it works
+        print("\(month):\(day):\(year)")
+        
+        
         
         //TODO: GET GPS
     }
@@ -117,7 +133,7 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(logOutPressed))
     }
     
-    // Log Out
+    // Log Out - FIX THIS!!!!
     
     @objc func logOutPressed() {
         do {
