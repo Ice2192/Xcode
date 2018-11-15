@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 import CoreLocation
 
 class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate {
@@ -23,6 +24,61 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var bicyclistsYouthCount: UILabel!
     @IBOutlet weak var bicyclistsAdultCount: UILabel!
     @IBOutlet weak var bicyclistsSeniorCount: UILabel!
+    
+    let locationManager = CLLocationManager()
+    
+    var timer = Timer()
+    var minutes = 0
+    var seconds = 0
+    var isRunning = false
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBAction func startTimer(_ sender: Any) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        if seconds == 60 {
+            minutes += 1
+            seconds = 0
+        }
+        timerLabel.text = "\(minutes):\(seconds)"
+    }
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Location
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(logOutPressed))
+    }
+    
+    // Recorded pop-up
+    func errorAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            print(location.coordinate)
+        }
+    }
+
     
     // Stepper
     // Hitting the plus/minus buttons will change the
@@ -104,33 +160,29 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     // Submit Button
     @IBAction func Submit(_ sender: Any) {
-        print("Truck Count: ", truckCount as Any)       // test - remove when done
+        self.errorAlert(title: "Success!", message: "Log Session Recorded!")
         
         //DATE & TIME
         let date = Date()
         let calendar = Calendar.current
         
+        // Capture Time
         let hour = calendar.component(.hour, from: date)
         let minutes = calendar.component(.minute, from: date)
         let seconds = calendar.component(.second, from: date)
         // Check if it works
         print("\(hour):\(minutes):\(seconds)")
         
+        // Capture Date
         let day = calendar.component(.day, from: date)
         let month = calendar.component(.month, from: date)
         let year = calendar.component(.year, from: date)
         // Check if it works
         print("\(month):\(day):\(year)")
         
-        
-        
+
         //TODO: GET GPS
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(logOutPressed))
+        locationManager.stopUpdatingLocation()
     }
     
     // Log Out - FIX THIS!!!!

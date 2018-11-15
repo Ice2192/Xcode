@@ -242,7 +242,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="dx9-Of-sT1" userLabel="Trucks Stack View">
-                                <rect key="frame" x="16" y="109" width="382" height="29"/>
+                                <rect key="frame" x="16" y="124" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMn-eE-f0d" userLabel="Trucks Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -269,7 +269,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="lLi-25-vYy" userLabel="People Child Stack View">
-                                <rect key="frame" x="16" y="197" width="382" height="29"/>
+                                <rect key="frame" x="16" y="212" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-1k-BlU" userLabel="Trucks Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -296,7 +296,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-9c-KYI" userLabel="People Youth Stack View">
-                                <rect key="frame" x="16" y="234" width="382" height="29"/>
+                                <rect key="frame" x="16" y="249" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-L0-JFr" userLabel="People Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -323,7 +323,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-fP-2ku" userLabel="People Adult Stack View">
-                                <rect key="frame" x="16" y="271" width="382" height="29"/>
+                                <rect key="frame" x="16" y="286" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rP-xl-OOM" userLabel="Bicyclists Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -350,7 +350,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-au-S0v" userLabel="People Senior Stack View">
-                                <rect key="frame" x="16" y="308" width="382" height="29"/>
+                                <rect key="frame" x="16" y="323" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Vj-STc" userLabel="Smell Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -377,7 +377,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="9K9-yt-mTq" userLabel="Bicyclists Child Stack View">
-                                <rect key="frame" x="16" y="396" width="382" height="29"/>
+                                <rect key="frame" x="16" y="411" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4V-pn-xCA" userLabel="Trucks Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -404,7 +404,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="xWF-qB-ZUc" userLabel="Bicyclists Youth Stack View">
-                                <rect key="frame" x="16" y="433" width="382" height="29"/>
+                                <rect key="frame" x="16" y="448" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaI-k9-tNV" userLabel="People Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -431,7 +431,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="njM-41-Q4x" userLabel="Bicyclists Adult Stack View">
-                                <rect key="frame" x="16" y="470" width="382" height="29"/>
+                                <rect key="frame" x="16" y="485" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JId-XI-M0o" userLabel="Bicyclists Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -458,7 +458,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-0r-Gbi" userLabel="Bicyclists Snior Stack View">
-                                <rect key="frame" x="16" y="507" width="382" height="29"/>
+                                <rect key="frame" x="16" y="522" width="382" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60L-GT-ZBG" userLabel="Smell Label">
                                         <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="29"/>
@@ -485,7 +485,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yva-eG-UK9" userLabel="People Label">
-                                <rect key="frame" x="16" y="153" width="382" height="36"/>
+                                <rect key="frame" x="16" y="168" width="382" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Gvt-z0-7wG"/>
                                 </constraints>
@@ -494,7 +494,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bicyclists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtK-ra-oWu" userLabel="Bicyclists Label">
-                                <rect key="frame" x="16" y="352" width="382" height="36"/>
+                                <rect key="frame" x="16" y="367" width="382" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="iYR-vq-Wbk"/>
                                 </constraints>
@@ -503,7 +503,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smell Intensity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnX-X4-r2v">
-                                <rect key="frame" x="16" y="541" width="110" height="30"/>
+                                <rect key="frame" x="16" y="556" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="32y-IN-Ngn"/>
                                 </constraints>
@@ -512,7 +512,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCI-75-rsB">
-                                <rect key="frame" x="131" y="541" width="34.666666666666657" height="30"/>
+                                <rect key="frame" x="131" y="556" width="34.666666666666657" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="krN-CO-ThB"/>
                                 </constraints>
@@ -521,7 +521,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdL-iR-9eo">
-                                <rect key="frame" x="0.0" y="571" width="414" height="108"/>
+                                <rect key="frame" x="0.0" y="586" width="414" height="108"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Wm2-KN-T8s"/>
                                     <constraint firstAttribute="height" constant="108" id="a7s-AN-H8b"/>
@@ -531,6 +531,34 @@
                                     <outlet property="delegate" destination="c4k-q6-H38" id="5N3-Eu-RQx"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-S4-ygr" userLabel="Time Label">
+                                <rect key="frame" x="16" y="80" width="28" height="24"/>
+                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uG-EF-CKI" userLabel="Time">
+                                <rect key="frame" x="164" y="81" width="49" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2S-nS-bCG">
+                                <rect key="frame" x="307" y="74" width="75" height="35"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.61960784310000006" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Gy4-b7-5Fo"/>
+                                    <constraint firstAttribute="height" constant="35" id="cB9-gY-iFc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RamaGothicE-Regular" family="Rama Gothic E" pointSize="20"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimer:" destination="c4k-q6-H38" eventType="touchUpInside" id="5ur-zc-mZD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -540,6 +568,7 @@
                             <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="lLi-25-vYy" secondAttribute="trailing" constant="16" id="43P-hr-oMU"/>
                             <constraint firstItem="G0o-Iq-mdg" firstAttribute="bottom" secondItem="lBd-Y4-1d1" secondAttribute="bottom" id="4vj-s2-TlY"/>
                             <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="qtK-ra-oWu" secondAttribute="trailing" constant="16" id="6dP-cd-zLQ"/>
+                            <constraint firstItem="aCh-S4-ygr" firstAttribute="top" secondItem="lBd-Y4-1d1" secondAttribute="top" constant="16" id="6dW-Bm-yL6"/>
                             <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="xWF-qB-ZUc" secondAttribute="trailing" constant="16" id="7B9-oB-CEt"/>
                             <constraint firstItem="FdL-iR-9eo" firstAttribute="trailing" secondItem="lBd-Y4-1d1" secondAttribute="trailing" id="9jp-uC-7hM"/>
                             <constraint firstItem="RnX-X4-r2v" firstAttribute="top" secondItem="a4k-0r-Gbi" secondAttribute="bottom" constant="5" id="BJ0-UL-ZaP"/>
@@ -553,14 +582,17 @@
                             <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="tBT-9c-KYI" secondAttribute="trailing" constant="16" id="NHD-Nc-oFE"/>
                             <constraint firstItem="9K9-yt-mTq" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="O3c-t4-cv0"/>
                             <constraint firstItem="RCI-75-rsB" firstAttribute="leading" secondItem="RnX-X4-r2v" secondAttribute="trailing" constant="5" id="PP9-T0-cZa"/>
+                            <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="B2S-nS-bCG" secondAttribute="trailing" constant="32" id="PbJ-dh-Z6J"/>
                             <constraint firstItem="tBT-9c-KYI" firstAttribute="top" secondItem="lLi-25-vYy" secondAttribute="bottom" constant="8" id="QUC-dF-Uus"/>
                             <constraint firstItem="qtK-ra-oWu" firstAttribute="top" secondItem="DLI-au-S0v" secondAttribute="bottom" constant="15" id="QWg-c5-RRW"/>
                             <constraint firstItem="FdL-iR-9eo" firstAttribute="top" secondItem="RnX-X4-r2v" secondAttribute="bottom" id="Qsn-th-tBu"/>
                             <constraint firstItem="lLi-25-vYy" firstAttribute="top" secondItem="Yva-eG-UK9" secondAttribute="bottom" constant="8" id="SG8-P7-pvY"/>
                             <constraint firstItem="lLi-25-vYy" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="UqY-Fh-3yc"/>
+                            <constraint firstItem="B2S-nS-bCG" firstAttribute="top" secondItem="lBd-Y4-1d1" secondAttribute="top" constant="10" id="Us6-9k-Jdp"/>
                             <constraint firstItem="FdL-iR-9eo" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" id="Uwr-1p-4dx"/>
                             <constraint firstItem="DLI-au-S0v" firstAttribute="top" secondItem="pYi-fP-2ku" secondAttribute="bottom" constant="8" id="YJH-Ox-zjq"/>
-                            <constraint firstItem="dx9-Of-sT1" firstAttribute="top" secondItem="lBd-Y4-1d1" secondAttribute="top" constant="45" id="ZSL-d3-LfR"/>
+                            <constraint firstItem="aCh-S4-ygr" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="YkI-Z9-owi"/>
+                            <constraint firstItem="dx9-Of-sT1" firstAttribute="top" secondItem="lBd-Y4-1d1" secondAttribute="top" constant="60" id="ZSL-d3-LfR"/>
                             <constraint firstItem="RnX-X4-r2v" firstAttribute="leading" secondItem="lBd-Y4-1d1" secondAttribute="leading" constant="16" id="aBc-in-gvK"/>
                             <constraint firstItem="lBd-Y4-1d1" firstAttribute="trailing" secondItem="9K9-yt-mTq" secondAttribute="trailing" constant="16" id="cVz-2f-ivF"/>
                             <constraint firstItem="RCI-75-rsB" firstAttribute="top" secondItem="a4k-0r-Gbi" secondAttribute="bottom" constant="5" id="cpI-80-Z4C"/>
@@ -593,6 +625,7 @@
                         <outlet property="peopleYouthCount" destination="7lc-Za-wL6" id="TS7-wQ-5qZ"/>
                         <outlet property="smellLabel" destination="RCI-75-rsB" id="XAt-go-elb"/>
                         <outlet property="smellPickerView" destination="FdL-iR-9eo" id="hl2-qJ-Zvk"/>
+                        <outlet property="timerLabel" destination="9uG-EF-CKI" id="L4I-Xc-FTG"/>
                         <outlet property="truckCount" destination="lju-Lw-ZvV" id="xKp-WV-Q12"/>
                     </connections>
                 </viewController>
