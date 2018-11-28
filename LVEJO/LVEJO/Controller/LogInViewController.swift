@@ -80,6 +80,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
 
+    // Pass user strings to RecordViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var recordController = segue.destination as! RecordViewController
         recordController.name = nameTextField.text!
@@ -101,6 +102,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     if let u = user {
                         // User is found, go to record screen
                         self.performSegue(withIdentifier: "goToRecord", sender: self)
+                        
+                        
                     }
                     else {
                         // Error: check error and show message

@@ -44,6 +44,7 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
+    // Timer
     @objc func updateTimer() {
         if seconds == 60 {
             minutes += 1
@@ -57,6 +58,12 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         super.viewDidLoad()
         
         ref = Database.database().reference()
+        
+        // Save strings from LogInViewController
+        var userEmail = email
+        var userName = name
+        var userPhone = phone
+        
         
         
         // Location
@@ -216,9 +223,21 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         // Save data to Firebase
         let results = Database.database().reference().child("userResults").childByAutoId()
         
-        self.ref?.child("User Results").childByAutoId().setValue(["truck count": self.truckCount.text!,
-                                                  "people (child)": self.peopleChildCount.text!,
-                                                  "bicyclists (adult)": self.bicyclistsAdultCount.text!])
+        self.ref?.child("User Results").childByAutoId().setValue([
+                                                  "Email": self.email,
+                                                  "Name": self.name,
+                                                  "Phone": self.phone,
+                                                  "Truck Count": self.truckCount.text!,
+                                                  "People (Child)": self.peopleChildCount.text!,
+                                                  "People (Youth)": self.peopleYouthCount.text!,
+                                                  "People (Adult)": self.peopleAdultCount.text!,
+                                                  "People (Senior)": self.peopleSeniorCount.text!,
+                                                  "Bicyclists (Child)": self.bicyclistsChildCount.text!,
+                                                  "Bicyclists (Youth)": self.bicyclistsYouthCount.text!,
+                                                  "Bicyclists (Adult)": self.bicyclistsAdultCount.text!,
+                                                  "Bicyclists (Senior)": self.bicyclistsSeniorCount.text!,
+                                                  "Smell Indesnity": self.smellLabel.text!
+        ])
 
         //TODO: GET GPS
         locationManager.stopUpdatingLocation()
