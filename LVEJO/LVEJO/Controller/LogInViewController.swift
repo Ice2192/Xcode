@@ -80,7 +80,13 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var recordController = segue.destination as! RecordViewController
+        recordController.name = nameTextField.text!
+        recordController.email = emailTextField.text!
+        recordController.phone = phoneTextField.text!
+        
+    }
     
     // Log in the user
     @IBAction func logInPressed(_ sender: Any) {
@@ -110,8 +116,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     
                     // Check that user isn't nil
                     if self.repasswordTextField.text == self.passwordTextField.text {
-                        // User is found, go to record screen
+                        // User is registered, go to record screen
                         self.performSegue(withIdentifier: "goToRecord", sender: self)
+                        // Save name, number and email
+                        let ref = Database.database().reference().child("userInfo").childByAutoId()
+                        
+                        ref.setValue(["name": self.nameTextField.text!,
+                                      "email": self.emailTextField.text!,
+                                      "phone": self.phoneTextField.text!])
                     }
                     else {
                         // Error: check error and show message

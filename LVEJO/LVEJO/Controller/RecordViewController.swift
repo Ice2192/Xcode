@@ -27,6 +27,13 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     let locationManager = CLLocationManager()
     
+    var ref:DatabaseReference?
+    
+    // Get name, email, and phone
+    var name = String()
+    var email = String()
+    var phone = String()
+    
     var timer = Timer()
     var minutes = 0
     var seconds = 0
@@ -46,9 +53,11 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        
         
         // Location
         locationManager.requestWhenInUseAuthorization()
@@ -149,17 +158,16 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return smell[row]
     }
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return smell.count
     }
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         smellLabel.text = smell[row]
     }
     
     // Submit Button
     @IBAction func Submit(_ sender: Any) {
+        
         self.errorAlert(title: "Success!", message: "Log Session Recorded!")
         
         //DATE & TIME
@@ -180,6 +188,37 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         // Check if it works
         print("\(month):\(day):\(year)")
         
+        /*
+         User1
+            Name
+            E-mail
+            Phone Number
+            Date/Time
+            GPS Coordinates
+            Truck Counts
+            People (Child)
+            People (Youth)
+            People (Adult)
+            People (Senior)
+            Bicyclists (Child)
+            Bicyclists (Youth)
+            Bicyclists (Adult)
+            Bicyclists (Senior)
+            Smell Intensity
+         
+         User2
+            Name
+            E-mail
+            Phone Number
+            ...
+         */
+        
+        // Save data to Firebase
+        let results = Database.database().reference().child("userResults").childByAutoId()
+        
+        self.ref?.child("User Results").childByAutoId().setValue(["truck count": self.truckCount.text!,
+                                                  "people (child)": self.peopleChildCount.text!,
+                                                  "bicyclists (adult)": self.bicyclistsAdultCount.text!])
 
         //TODO: GET GPS
         locationManager.stopUpdatingLocation()
@@ -193,8 +232,6 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             let welcomeViewController = WelcomeViewController()
             let welcomeViewNavigationController = UINavigationController(rootViewController: welcomeViewController)
             self.present(welcomeViewNavigationController, animated: true, completion: nil)
-            
-            
             
         } catch let err {
             print(err)
