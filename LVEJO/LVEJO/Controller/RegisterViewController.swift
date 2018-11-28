@@ -48,6 +48,7 @@ class RegisterViewController: UIViewController {
             }
         }
         else {
+            
             passNoMatch.isHidden = false
         }
         
