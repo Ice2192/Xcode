@@ -13,6 +13,8 @@ import FirebaseDatabase
 import CoreLocation
 
 class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate {
+    
+     let locationManager = CLLocationManager() // Requests Acess to the Location E.K.
 
     // Record Count Labels
     @IBOutlet weak var truckCount: UILabel!
@@ -25,7 +27,6 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var bicyclistsAdultCount: UILabel!
     @IBOutlet weak var bicyclistsSeniorCount: UILabel!
     
-    let locationManager = CLLocationManager()
     
     var ref:DatabaseReference?
     
@@ -66,12 +67,13 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         
         
-        // Location
+        // Location .... E.K.
         locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
         
@@ -239,10 +241,47 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                                                   "Smell Indesnity": self.smellLabel.text!
         ])
 
-        //TODO: GET GPS
-        locationManager.stopUpdatingLocation()
-    }
-    
+        //TODO: GET GPS // Done by Elaine Khor 28th Nov 2018
+       // var locationManager = CLLocationManager()
+      //  @IBOutlet weak var map: MKMapView!
+        
+       // override func viewDidLoad() {
+      //      super.viewDidLoad()
+          //  self.locationManager.requestWhenInUseAuthorization()
+            
+          //  if CLLocationManager.locationServicesEnabled() {
+                
+            //    locationManager.delegate = self
+            //    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+             //   locationManager.startUpdatingLocation()
+         //   }
+            
+       // }
+        
+       // override func didReceiveMemoryWarning() {
+         //   super.didReceiveMemoryWarning()
+            // disposes of any resources that can be recreated
+      //  }
+        
+      //  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+      //  {
+
+          //  let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+          //  print("locations = \(locValue.latitude) \(locValue.longitude)")
+         //   let userLocation = locations.last
+          //  let viewRegion = MKCoordinateRegionMakeWithDistance((userLocation?.coordinate)!, 600, 600)
+          //  self.map.setRegion (viewRegion, animated: true)
+            // not inlcuding this code due to only being able to see the the location through the app
+        // instead we are just having GPS coordinates be spit out on FireBase
+        // }
+        
+        //For use when the app is open & in the background
+        locationManager.requestAlwaysAuthorization()
+        
+        //For use when the app is open
+        //locationManager.requestWhenInUseAuthorization()
+        
+ 
     // Log Out - FIX THIS!!!!
     
     @objc func logOutPressed() {
@@ -260,4 +299,5 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
             
     }
+}
 }
