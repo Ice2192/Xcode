@@ -27,6 +27,8 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var bicyclistsAdultCount: UILabel!
     @IBOutlet weak var bicyclistsSeniorCount: UILabel!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var ref:DatabaseReference?
     
@@ -35,16 +37,21 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     var email = String()
     var phone = String()
     
+    /*
     var timer = Timer()
     var minutes = 0
     var seconds = 0
     var isRunning = false
+    */
     
+    /*
     @IBOutlet weak var timerLabel: UILabel!
     @IBAction func startTimer(_ sender: Any) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
+    */
     
+    /*
     // Timer
     @objc func updateTimer() {
         if seconds == 60 {
@@ -53,17 +60,19 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         }
         timerLabel.text = "\(minutes):\(seconds)"
     }
-    
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateLabel.isHidden = true
+        timeLabel.isHidden = true
         
         ref = Database.database().reference()
         
         // Save strings from LogInViewController
-        var userEmail = email
-        var userName = name
-        var userPhone = phone
+        //var userEmail = email
+        //var userName = name
+        //var userPhone = phone
         
         
         
@@ -77,7 +86,7 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             locationManager.startUpdatingLocation()
         }
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(logOutPressed))
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(logOutPressed))
     }
     
     // Recorded pop-up
@@ -180,6 +189,7 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         self.errorAlert(title: "Success!", message: "Log Session Recorded!")
         
         //DATE & TIME
+        
         let date = Date()
         let calendar = Calendar.current
         
@@ -194,33 +204,12 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         let day = calendar.component(.day, from: date)
         let month = calendar.component(.month, from: date)
         let year = calendar.component(.year, from: date)
+        let fullDate = day + month + year
         // Check if it works
         print("\(month):\(day):\(year)")
         
-        /*
-         User1
-            Name
-            E-mail
-            Phone Number
-            Date/Time
-            GPS Coordinates
-            Truck Counts
-            People (Child)
-            People (Youth)
-            People (Adult)
-            People (Senior)
-            Bicyclists (Child)
-            Bicyclists (Youth)
-            Bicyclists (Adult)
-            Bicyclists (Senior)
-            Smell Intensity
-         
-         User2
-            Name
-            E-mail
-            Phone Number
-            ...
-         */
+        dateLabel.text = "\(month)/\(day)/\(year)"
+        timeLabel.text = "\(hour):\(minutes):\(seconds)"
         
         // Save data to Firebase
         let results = Database.database().reference().child("userResults").childByAutoId()
@@ -229,7 +218,7 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                                                   "Email": self.email,
                                                   "Name": self.name,
                                                   "Phone": self.phone,
-                                                  "Truck Count": self.truckCount.text!,
+                                                  "Trucks": self.truckCount.text!,
                                                   "People (Child)": self.peopleChildCount.text!,
                                                   "People (Youth)": self.peopleYouthCount.text!,
                                                   "People (Adult)": self.peopleAdultCount.text!,
@@ -238,7 +227,10 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                                                   "Bicyclists (Youth)": self.bicyclistsYouthCount.text!,
                                                   "Bicyclists (Adult)": self.bicyclistsAdultCount.text!,
                                                   "Bicyclists (Senior)": self.bicyclistsSeniorCount.text!,
-                                                  "Smell Indesnity": self.smellLabel.text!
+                                                  "Smell Indesnity": self.smellLabel.text!,
+                                                  "Date": self.dateLabel.text!,
+                                                  "Time": self.timeLabel.text!
+           
         ])
 
         //TODO: GET GPS // Done by Elaine Khor 28th Nov 2018
@@ -284,6 +276,7 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
  
     // Log Out - FIX THIS!!!!
     
+    /*
     @objc func logOutPressed() {
         do {
             try Auth.auth().signOut()
@@ -294,10 +287,10 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         } catch let err {
             print(err)
         }
-        
+
         
         
             
-    }
+    }*/
 }
 }
