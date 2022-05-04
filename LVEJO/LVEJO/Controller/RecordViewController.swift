@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 import CoreLocation
+import MapKit
 
 class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate {
     
@@ -29,6 +30,7 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var gpsLabel: UILabel!
     
     var ref:DatabaseReference?
     
@@ -37,35 +39,11 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     var email = String()
     var phone = String()
     
-    /*
-    var timer = Timer()
-    var minutes = 0
-    var seconds = 0
-    var isRunning = false
-    */
-    
-    /*
-    @IBOutlet weak var timerLabel: UILabel!
-    @IBAction func startTimer(_ sender: Any) {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-    }
-    */
-    
-    /*
-    // Timer
-    @objc func updateTimer() {
-        if seconds == 60 {
-            minutes += 1
-            seconds = 0
-        }
-        timerLabel.text = "\(minutes):\(seconds)"
-    }
-    */
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         dateLabel.isHidden = true
         timeLabel.isHidden = true
+        gpsLabel.isHidden = true
         
         ref = Database.database().reference()
         
@@ -101,9 +79,28 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        
+        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
+        
         if let location = locations.first {
             print(location.coordinate)
         }
+        
+        CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
+            if error != nil {
+                print("There was an error")
+            }
+            else {
+                if let place = placemark?[0] {
+                    self.gpsLabel.text = "\(place.thoroughfare)"
+                }
+                
+            }
+        }
+        
     }
 
     
@@ -229,7 +226,9 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                                                   "Bicyclists (Senior)": self.bicyclistsSeniorCount.text!,
                                                   "Smell Indesnity": self.smellLabel.text!,
                                                   "Date": self.dateLabel.text!,
-                                                  "Time": self.timeLabel.text!
+                                                  "Time": self.timeLabel.text!,
+                                                  "Location": self.gpsLabel.text!
+            
            
         ])
 
@@ -273,24 +272,10 @@ class RecordViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         //For use when the app is open
         //locationManager.requestWhenInUseAuthorization()
         
- 
-    // Log Out - FIX THIS!!!!
-    
-    /*
-    @objc func logOutPressed() {
-        do {
-            try Auth.auth().signOut()
-            let welcomeViewController = WelcomeViewController()
-            let welcomeViewNavigationController = UINavigationController(rootViewController: welcomeViewController)
-            self.present(welcomeViewNavigationController, animated: true, completion: nil)
-            
-        } catch let err {
-            print(err)
-        }
 
         
         
             
-    }*/
+    }
 }
-}
+

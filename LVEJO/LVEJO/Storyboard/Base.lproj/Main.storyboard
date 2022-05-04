@@ -544,6 +544,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrA-aN-NIT">
+                                <rect key="frame" x="56" y="658" width="292" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -601,6 +608,7 @@
                         <outlet property="bicyclistsSeniorCount" destination="g6D-Rs-oMg" id="Z5F-P7-knv"/>
                         <outlet property="bicyclistsYouthCount" destination="rIc-JH-1ew" id="GaX-vu-kLe"/>
                         <outlet property="dateLabel" destination="l8g-9k-tOm" id="AWC-pZ-bfJ"/>
+                        <outlet property="gpsLabel" destination="YrA-aN-NIT" id="bLi-F6-1tk"/>
                         <outlet property="peopleAdultCount" destination="1Ri-Mi-Brc" id="fBL-yO-uc2"/>
                         <outlet property="peopleChildCount" destination="kJU-Kr-gng" id="LeM-ew-lN8"/>
                         <outlet property="peopleSeniorCount" destination="Baa-7M-Zr8" id="qnJ-wY-Sq9"/>
